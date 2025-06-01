@@ -34,6 +34,21 @@ void addUser() {
     printf("User added successfully.\n");
 }
 
+void editUser() {
+    int id;
+    printf("Enter user ID to edit: ");
+    scanf("%d", &id); getchar();
+
+    User* updateUser = findUserById(id);
+    if (!updateUser) {
+        printf("Book not found.\n");
+        return;
+    }
+
+    printf("New Name: "); readLine(updateUser->name, sizeof(updateUser->name));
+    printf("User updated successfully.\n");
+}
+
 void deleteUser() {
     int id;
     printf("Enter user ID to delete: ");
