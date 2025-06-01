@@ -41,11 +41,11 @@ void editUser() {
 
     User* updateUser = findUserById(id);
     if (!updateUser) {
-        printf("Book not found.\n");
+        printf("User not found.\n");
         return;
     }
 
-    printf("New Name: "); readLine(updateUser->name, sizeof(updateUser->name));
+    printf("Enter New Name: "); readLine(updateUser->name, sizeof(updateUser->name));
     printf("User updated successfully.\n");
 }
 
