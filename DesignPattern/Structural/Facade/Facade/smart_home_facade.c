@@ -16,8 +16,9 @@ void activateAwayMode(SmartHomeFacade* facade) {
     facade->lighting->turnOff();                // Turn lighting system on
     facade->security->activateAlarm();          // Activate Alarm system
     facade->hvac->setTemperature(30);           // Set Temperature to 30
-    facade->hvac->setMode(HVAC_MODE_ECO);            // Set HVAC Mode to ECO
+    facade->hvac->setMode(HVAC_MODE_ECO);       // Set HVAC Mode to ECO
     facade->security->deactivateAlarm();        // Deactivate Alarm
+    facade->security->monitorSensor();          // Monitor sensors
 
     printf("Away Mode activated. \n");
 }
