@@ -47,15 +47,19 @@ Facade/
 ```bash
 make
 ./smart_home_app
+```
+---
 
-📌 Design Notes
+## 📌 Design Notes
 - **SmartHomeFacade** completely abstracts away lighting, security, and HVAC logic.
 
 - The application layer does not directly call subsystem APIs.
 
 - Easy to maintain: adding a new system only requires changes inside the Facade, not in main.
 
-🚀 Possible Extensions
+---
+
+## 🚀 Possible Extensions
 - Add more systems: audio, blinds, garden sprinklers, etc.
 
 - Allow user-defined routines via config files.
@@ -64,3 +68,4 @@ make
 
 - Add more hvac mode such as: FAN_ONLY, TURN_OFF, AUTO,...
 
+---
