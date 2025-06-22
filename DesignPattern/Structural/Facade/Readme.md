@@ -30,27 +30,27 @@ Use the **Facade Pattern** to:
 
 ## 🏗️ Project Structure
 
-Project Structure
-.
+```bash
 ├── Facade/
-│   ├── main.c                     # Entry point, uses SmartHomeFacade
-│   ├── SmartHomeFacade.h         # Facade class header controlling all subsystems
-│   └── SmartHomeFacade.c         # Facade class implementation
+│   ├── main.c                   # Entry point, uses SmartHomeFacade
+│   ├── SmartHomeFacade.h        # Facade class header controlling all subsystems
+│   └── SmartHomeFacade.c        # Facade class implementation
 │
 ├── Lighting/
-│   ├── lighting_system.h         # Lighting system header
-│   └── lighting_system.c         # Lighting system implementation
+│   ├── lighting_system.h        # Lighting system header
+│   └── lighting_system.c        # Lighting system implementation
 │
 ├── Security/
-│   ├── security_system.h         # Security system header
-│   └── security_system.c         # Security system implementation
+│   ├── security_system.h        # Security system header
+│   └── security_system.c        # Security system implementation
 │
 ├── HVAC/
-│   ├── hvac_system.h             # HVAC system header
-│   └── hvac_system.c             # HVAC system implementation
+│   ├── hvac_system.h            # HVAC system header
+│   └── hvac_system.c            # HVAC system implementation
 │
-└── README.md                     # This documentation
-
+├── Makefile                     # Build script to compile the project
+└── README.md                    # Project documentation
+```
 
 ---
 
