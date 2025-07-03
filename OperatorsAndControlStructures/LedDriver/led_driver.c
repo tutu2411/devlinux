@@ -48,7 +48,7 @@ void LedFill(uint8_t red, uint8_t green, uint8_t blue) {
     }
 }
 
-const uint32_t* getBuffer(){
+const uint32_t* GetBuffer(){
     return ledBuffer;
 }
 
@@ -56,7 +56,7 @@ size_t LedGetPixelCount() {
     return ledCount;
 }
 
-void showPixelInfo(size_t index) {
+void ShowPixelInfo(size_t index) {
 
     if (index > ledCount) return;
     uint32_t pixel = ledBuffer[index];
@@ -79,7 +79,7 @@ void ShowPixelInfo2(size_t index) {
 void ShowLedInfo() {
     if (ledBuffer != NULL && ledCount != 0) {
         for (size_t i = 0; i < ledCount; i++) {
-            showPixelInfo(i);
+            ShowPixelInfo(i);
         }
     }
 }

@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 typedef enum RESULT{
     FAILED = -1,
     SUUCCESS
@@ -21,5 +20,6 @@ size_t LedGetPixelCount();
 void ShowPixelInfo2(size_t index);
 void ShowLedInfo();
 void ShowLedInfo2();
+const uint32_t* GetBuffer();
 
 #endif
