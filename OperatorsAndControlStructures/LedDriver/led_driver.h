@@ -11,15 +11,15 @@ typedef enum RESULT{
     SUUCCESS
 } RESULT;
 
-int ledInit(size_t numPixels);
-void ledShutdown();
-void ledClear();
-const uint32_t* ledGetBuffer();
-void ledSetPixelColor(size_t index, uint8_t red, uint8_t green, uint8_t blue);
-void ledFill(uint8_t red, uint8_t green, uint8_t blue);
-size_t ledGetPixelCount();
-void showPixelInfo2(size_t index);
-void showLedInfo();
-void showLedInfo2();
+int LedInit(size_t numPixels);
+void LedShutdown();
+void LedClear();
+const uint32_t* LedGetBuffer();
+void LedSetPixelColor(size_t index, uint8_t red, uint8_t green, uint8_t blue);
+void LedFill(uint8_t red, uint8_t green, uint8_t blue);
+size_t LedGetPixelCount();
+void ShowPixelInfo2(size_t index);
+void ShowLedInfo();
+void ShowLedInfo2();
 
 #endif
