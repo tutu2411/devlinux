@@ -1,92 +1,92 @@
 #include "led_driver.h"
 
-static uint32_t* ledBuffer = NULL;
-static size_t ledCount = 0;
+static uint32_t* LedBuffer = NULL;
+static size_t LedCount = 0;
 
-int LedInit(size_t numPixel) {
+int LedInit(size_t NumPixel) {
 
-    if (numPixel == 0) return FAILED;
+    if (NumPixel == 0) return FAILED;
 
-    ledBuffer = (uint32_t*)malloc(numPixel * sizeof(uint32_t));
-    if (ledBuffer == NULL) return FAILED;
+    LedBuffer = (uint32_t*)malloc(NumPixel * sizeof(uint32_t));
+    if (LedBuffer == NULL) return FAILED;
 
-    ledCount = numPixel;
-    printf("Create %d pixel success\n", numPixel);
+    LedCount = NumPixel;
+    printf("Create %d pixel success\n", NumPixel);
     LedClear();
     printf("Clear led success\n");
 
     return SUUCCESS;
 }
 
-void LedSetPixelColor(size_t index, uint8_t red, uint8_t green, uint8_t blue) {
+void LedSetPixelColor(size_t Index, uint8_t Red, uint8_t Green, uint8_t Blue) {
     
-    if (index > ledCount) return;
-    ledBuffer[index] = blue + (red << 8) + (green << 16);
+    if (Index > LedCount) return;
+    LedBuffer[Index] = Blue + (Red << 8) + (Green << 16);
 }
 
 void LedShutdown() {
-    if (ledBuffer != NULL) {
+    if (LedBuffer != NULL) {
         printf("memory has been free");
-        free(ledBuffer);
-        ledBuffer = NULL;
+        free(LedBuffer);
+        LedBuffer = NULL;
     }
 }
 
 void LedClear() {
-    if (ledBuffer != NULL && ledCount != 0) {
-        for (size_t i = 0; i < ledCount; i++) {
-            ledBuffer[i] = 0;
+    if (LedBuffer != NULL && LedCount != 0) {
+        for (size_t i = 0; i < LedCount; i++) {
+            LedBuffer[i] = 0;
         }
     }
 }
 
 void LedFill(uint8_t red, uint8_t green, uint8_t blue) {
-    if (ledBuffer != NULL && ledCount != 0) {
-        for (size_t i = 0; i < ledCount; i++) {
+    if (LedBuffer != NULL && LedCount != 0) {
+        for (size_t i = 0; i < LedCount; i++) {
             LedSetPixelColor(i, red, green, blue);
         }
     }
 }
 
 const uint32_t* GetBuffer(){
-    return ledBuffer;
+    return LedBuffer;
 }
 
 size_t LedGetPixelCount() {
-    return ledCount;
+    return LedCount;
 }
 
 void ShowPixelInfo(size_t index) {
 
-    if (index > ledCount) return;
-    uint32_t pixel = ledBuffer[index];
+    if (index > LedCount) return;
+    uint32_t Pixel = LedBuffer[index];
 
-    uint32_t blue = (pixel >> 0) & 0xFF;
-    uint32_t red = (pixel >> 8) & 0xFF;
-    uint32_t green = (pixel >> 16) & 0xFF;
+    uint32_t Blue = (Pixel >> 0) & 0xFF;
+    uint32_t Red = (Pixel >> 8) & 0xFF;
+    uint32_t Green = (Pixel >> 16) & 0xFF;
 
-    printf("PIXEL %d: GREEN %u RED %u BLUE %u\n",index, green, red, blue);
+    printf("PIXEL %d: GREEN %u RED %u BLUE %u\n",index, Green, Red, Blue);
 }
 
-void ShowPixelInfo2(size_t index) {
+void ShowPixelInfo2(size_t PixelIndex) {
 
-    if (index > ledCount) return;
-    uint32_t pixel = ledBuffer[index];
+    if (PixelIndex > LedCount) return;
+    uint32_t Pixel = LedBuffer[PixelIndex];
 
-    printf("PIXEL %d: value 0x%08X\n",index, pixel);
+    printf("PIXEL %d: value 0x%08X\n",PixelIndex, Pixel);
 }
 
 void ShowLedInfo() {
-    if (ledBuffer != NULL && ledCount != 0) {
-        for (size_t i = 0; i < ledCount; i++) {
+    if (LedBuffer != NULL && LedCount != 0) {
+        for (size_t i = 0; i < LedCount; i++) {
             ShowPixelInfo(i);
         }
     }
 }
 
 void ShowLedInfo2() {
-    if (ledBuffer != NULL && ledCount != 0) {
-        for (size_t i = 0; i < ledCount; i++) {
+    if (LedBuffer != NULL && LedCount != 0) {
+        for (size_t i = 0; i < LedCount; i++) {
             ShowPixelInfo2(i);
         }
     }
