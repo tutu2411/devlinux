@@ -16,15 +16,15 @@ int main()
     ShowLedInfo();
 
     // Show pixel 0,4,9
-    ShowPixelInfo2(0);
-    ShowPixelInfo2(4);
-    ShowPixelInfo2(9);
+    ShowPixelInHexa(0);
+    ShowPixelInHexa(4);
+    ShowPixelInHexa(9);
     
     // Set all pixel to BLUE
     LedFill(0, 255, 0);
 
     // Show all led info in hexa
-    ShowLedInfo2();
+    ShowLedInfoInHexa();
     
     // Free memory
     LedShutdown();

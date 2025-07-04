@@ -68,7 +68,7 @@ void ShowPixelInfo(size_t index) {
     printf("PIXEL %d: GREEN %u RED %u BLUE %u\n",index, Green, Red, Blue);
 }
 
-void ShowPixelInfo2(size_t PixelIndex) {
+void ShowPixelInHexa(size_t PixelIndex) {
 
     if (PixelIndex > LedCount) return;
     uint32_t Pixel = LedBuffer[PixelIndex];
@@ -84,10 +84,10 @@ void ShowLedInfo() {
     }
 }
 
-void ShowLedInfo2() {
+void ShowLedInfoInHexa() {
     if (LedBuffer != NULL && LedCount != 0) {
         for (size_t i = 0; i < LedCount; i++) {
-            ShowPixelInfo2(i);
+            ShowPixelInHexa(i);
         }
     }
 }

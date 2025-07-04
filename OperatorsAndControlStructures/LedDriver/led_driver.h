@@ -17,9 +17,9 @@ const uint32_t* LedGetBuffer();
 void LedSetPixelColor(size_t Index, uint8_t Red, uint8_t Green, uint8_t Blue);
 void LedFill(uint8_t Red, uint8_t Green, uint8_t Blue);
 size_t LedGetPixelCount();
-void ShowPixelInfo2(size_t Index);
+void ShowPixelInHexa(size_t Index);
 void ShowLedInfo();
-void ShowLedInfo2();
+void ShowLedInfoInHexa();
 const uint32_t* GetBuffer();
 
 #endif
