@@ -37,6 +37,7 @@ typedef enum {
     logEmergency, logAlert, logCritical, logError,
     logWarning, logNotice, logInfo, logDebug
 } logLevel;
+```
 → Đại diện cho các mức độ log theo chuẩn syslog.
 
 🔹 Hàm API chính
