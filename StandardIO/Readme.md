@@ -27,10 +27,6 @@ logger_project/
 │ └── logger_exec
 └── Makefile # Biên dịch toàn bộ dự án
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 3. 🧩 Các thành phần chính
@@ -52,28 +48,24 @@ loggerSetLevel(level)	Thay đổi mức lọc log tại runtime
 logMessage(level, format, ...)	Macro tiện lợi, tự động chèn __FILE__, __LINE__
 
 🔹 Biến nội bộ (module scope)
-c
-Copy
-Edit
 static FILE *logFile;
 static logLevel currentLevel;
 → Quản lý trạng thái của logger (mức lọc, file log đang mở).
 
-4. ⚙️ Build & Run
+---
+
+## 4. ⚙️ Build & Run
 🛠 Build bằng Makefile
-bash
-Copy
-Edit
+
 make
+
 ▶️ Run chương trình
-bash
-Copy
-Edit
-./build/logger_exec
-5. 🔁 Flow chart
-plaintext
-Copy
-Edit
+./logger.exe
+
+---
+
+## 5. 🔁 Flow chart
+
                 ┌────────────┐
                 │ logMessage │ ←─────────────── Gọi từ main.c
                 └─────┬──────┘
@@ -105,7 +97,4 @@ Các mức log thấp hơn mức lọc sẽ không xuất hiện.
 
 Format chuẩn:
 
-css
-Copy
-Edit
 [2025-07-07 09:00:00] [ERROR] [main.c:25] - Failed to open file.
