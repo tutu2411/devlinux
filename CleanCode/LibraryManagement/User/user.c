@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "user.h"
-#include "book.h"
-#include "utils.h"
+#include "..\Book\book.h"
+#include "..\Utils\utils.h"
 
 User users[MAX_USERS];
 int userCount = 0;

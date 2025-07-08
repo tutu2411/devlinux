@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "book.h"
-#include "user.h"
-#include "borrow.h"
+#include "Book\book.h"
+#include "User\user.h"
+#include "Borrow\borrow.h"
 
 void showMenu() {
     printf("\n===== LIBRARY MENU =====\n");

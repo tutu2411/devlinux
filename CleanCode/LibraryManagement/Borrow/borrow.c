@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "book.h"
-#include "user.h"
+#include "..\Book\book.h"
+#include "..\User\user.h"
 
 void borrowBook() {
     int userId, bookId;

@@ -1,5 +1,5 @@
-#include "Sensor.h"
-#include "Subscriber.h"
+#include "\Sensor\Sensor.h"
+#include "\Subscriber\Subscriber.h"
 #include <stdio.h>
 
 // Declare the factory functions
