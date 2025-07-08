@@ -96,11 +96,13 @@ make
 
 Kết quả mong đợi:
 
+```log
 [2025-07-08 07:47:54] [INFO] [main.c:7] - Program started.
 [2025-07-08 07:47:54] [WARNING] [main.c:8] - Low disk space.
 [2025-07-08 07:47:54] [ERROR] [main.c:9] - Failed to open file.
 [2025-07-08 07:47:54] [EMERGENCY] [main.c:10] - System crash imminent!
 [2025-07-08 07:47:54] [CRITICAL] [main.c:14] - Critical failure!
+```
 
 Log được ghi đúng thứ tự ra console và file.
 
