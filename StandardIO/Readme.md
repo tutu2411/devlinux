@@ -90,7 +90,7 @@ make
 
 ---
 
-6. ✅ Kiểm thử
+## 6. ✅ Kiểm thử
 📄 main.c
 Đóng vai trò là chương trình kiểm thử, kiểm tra các mức log và thay đổi cấu hình thời gian chạy.
 
