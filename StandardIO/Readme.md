@@ -87,6 +87,9 @@ make
                        ▼
                [5] In ra console
                [6] In ra file (nếu có)
+
+---
+
 6. ✅ Kiểm thử
 📄 main.c
 Đóng vai trò là chương trình kiểm thử, kiểm tra các mức log và thay đổi cấu hình thời gian chạy.
