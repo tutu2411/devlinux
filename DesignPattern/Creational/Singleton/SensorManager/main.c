@@ -2,13 +2,13 @@
 #include "SensorManager.h"
 
 int main() {
-    SensorManager* sensorManager = getSensorManager();
+    SensorManager* sensorManager = GetSensorManager();
 
     sensorManager ->collectData();
     sensorManager ->uploadToDatabase();
 
     // Get another Sensor Manager instance
-    SensorManager* sensorManager2 = getSensorManager();
+    SensorManager* sensorManager2 = GetSensorManager();
 
     return 0;
 }

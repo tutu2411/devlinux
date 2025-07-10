@@ -6,6 +6,6 @@ typedef struct {
     void (*uploadToDatabase)();
 } SensorManager;
 
-SensorManager* getSensorManager();
+SensorManager* GetSensorManager();
 
 #endif // SENSOR_MANAGER_H

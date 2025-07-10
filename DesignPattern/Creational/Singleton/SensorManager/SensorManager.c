@@ -12,7 +12,7 @@ void uploadToDatabaseImpl() {
     printf("Uploading data to the database...\n");
 }
 
-SensorManager* getSensorManager() 
+SensorManager* GetSensorManager() 
 {
     if (sensorManagerInstance == NULL) 
     {
