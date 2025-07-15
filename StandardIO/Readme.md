@@ -15,6 +15,16 @@ Dự án này hiện thực một **module ghi log chuyên nghiệp trong ngôn 
 ## 2. 📁 Cấu trúc source code
 
 logger_project/
+
+
+
+
+
+
+
+
+
+
 ├── include/ # Header files
 │ └── logger.h
 ├── src/ # Source code
@@ -23,7 +33,8 @@ logger_project/
 │ └── main.c
 ├── output/ # File log output (tùy chọn)
 │ └── log.txt
-├── build/ # (Tùy chọn) file binary sau khi build
+├── build/ # (Tùy chọn) file binary sau 
+khi build
 │ └── logger_exec
 └── Makefile # Biên dịch toàn bộ dự án
 
