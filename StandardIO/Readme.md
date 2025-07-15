@@ -13,18 +13,8 @@ Dự án này hiện thực một **module ghi log chuyên nghiệp trong ngôn 
 ---
 
 ## 2. 📁 Cấu trúc source code
-
+```text
 logger_project/
-
-
-
-
-
-
-
-
-
-
 ├── include/ # Header files
 │ └── logger.h
 ├── src/ # Source code
@@ -37,7 +27,7 @@ logger_project/
 khi build
 │ └── logger_exec
 └── Makefile # Biên dịch toàn bộ dự án
-
+```
 ---
 
 ## 3. 🧩 Các thành phần chính
@@ -77,7 +67,7 @@ make
 ---
 
 ## 5. 🔁 Flow chart
-
+```text
                 ┌────────────┐
                 │ logMessage │ ←─────────────── Gọi từ main.c
                 └─────┬──────┘
@@ -99,7 +89,7 @@ make
                [5] In ra console
                [6] In ra file (nếu có)
 
----
+```
 
 ## 6. ✅ Kiểm thử
 📄 main.c
